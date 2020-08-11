@@ -9,13 +9,26 @@
 /* Begin PBXBuildFile section */
 		3E13D53724D65E4400022542 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E13D53624D65E4400022542 /* AppDelegate.swift */; };
 		3E13D53924D65E4400022542 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E13D53824D65E4400022542 /* SceneDelegate.swift */; };
-		3E13D53B24D65E4400022542 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E13D53A24D65E4400022542 /* ViewController.swift */; };
 		3E13D53E24D65E4400022542 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E13D53C24D65E4400022542 /* Main.storyboard */; };
 		3E13D54124D65E4400022542 /* MyRecords.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3E13D53F24D65E4400022542 /* MyRecords.xcdatamodeld */; };
 		3E13D54324D65E4600022542 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E13D54224D65E4600022542 /* Assets.xcassets */; };
 		3E13D54624D65E4600022542 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E13D54424D65E4600022542 /* LaunchScreen.storyboard */; };
 		3E13D55124D65E4600022542 /* MyRecordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E13D55024D65E4600022542 /* MyRecordsTests.swift */; };
 		3E13D55C24D65E4600022542 /* MyRecordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E13D55B24D65E4600022542 /* MyRecordsUITests.swift */; };
+		3E45763D24E2CC9E0099D281 /* RecordListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E45763C24E2CC9E0099D281 /* RecordListViewModel.swift */; };
+		3E45764024E2CD1A0099D281 /* BaseApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E45763F24E2CD1A0099D281 /* BaseApiClient.swift */; };
+		3E45764224E2CF1C0099D281 /* RecordsApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E45764124E2CF1C0099D281 /* RecordsApiClient.swift */; };
+		3E45764924E2D2120099D281 /* Fields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E45764424E2D2120099D281 /* Fields.swift */; };
+		3E45764A24E2D2120099D281 /* Json4Swift_Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E45764524E2D2120099D281 /* Json4Swift_Base.swift */; };
+		3E45764B24E2D2120099D281 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E45764624E2D2120099D281 /* Result.swift */; };
+		3E45764C24E2D2120099D281 /* _links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E45764724E2D2120099D281 /* _links.swift */; };
+		3E45764D24E2D2120099D281 /* Records.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E45764824E2D2120099D281 /* Records.swift */; };
+		3E94E64624D7B8AA006705DC /* RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E94E64024D7B8AA006705DC /* RecordsViewController.swift */; };
+		3E94E64724D7B8AA006705DC /* RecordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E94E64124D7B8AA006705DC /* RecordsTableViewCell.swift */; };
+		3E94E64C24D7B8FA006705DC /* eminem_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E94E64924D7B8FA006705DC /* eminem_1.png */; };
+		3EB0DC9924E2D79800E7BEDE /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB0DC9824E2D79800E7BEDE /* Bindable.swift */; };
+		3EB0DC9C24E2D84A00E7BEDE /* Record+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB0DC9A24E2D84A00E7BEDE /* Record+CoreDataClass.swift */; };
+		3EB0DC9D24E2D84A00E7BEDE /* Record+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB0DC9B24E2D84A00E7BEDE /* Record+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +52,6 @@
 		3E13D53324D65E4400022542 /* MyRecords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyRecords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E13D53624D65E4400022542 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E13D53824D65E4400022542 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3E13D53A24D65E4400022542 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3E13D53D24D65E4400022542 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3E13D54024D65E4400022542 /* MyRecords.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyRecords.xcdatamodel; sourceTree = "<group>"; };
 		3E13D54224D65E4600022542 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +63,20 @@
 		3E13D55724D65E4600022542 /* MyRecordsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyRecordsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E13D55B24D65E4600022542 /* MyRecordsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordsUITests.swift; sourceTree = "<group>"; };
 		3E13D55D24D65E4600022542 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E45763C24E2CC9E0099D281 /* RecordListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordListViewModel.swift; sourceTree = "<group>"; };
+		3E45763F24E2CD1A0099D281 /* BaseApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApiClient.swift; sourceTree = "<group>"; };
+		3E45764124E2CF1C0099D281 /* RecordsApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsApiClient.swift; sourceTree = "<group>"; };
+		3E45764424E2D2120099D281 /* Fields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fields.swift; sourceTree = "<group>"; };
+		3E45764524E2D2120099D281 /* Json4Swift_Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Json4Swift_Base.swift; sourceTree = "<group>"; };
+		3E45764624E2D2120099D281 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		3E45764724E2D2120099D281 /* _links.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _links.swift; sourceTree = "<group>"; };
+		3E45764824E2D2120099D281 /* Records.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Records.swift; sourceTree = "<group>"; };
+		3E94E64024D7B8AA006705DC /* RecordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
+		3E94E64124D7B8AA006705DC /* RecordsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordsTableViewCell.swift; sourceTree = "<group>"; };
+		3E94E64924D7B8FA006705DC /* eminem_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eminem_1.png; sourceTree = "<group>"; };
+		3EB0DC9824E2D79800E7BEDE /* Bindable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bindable.swift; path = MyRecords/Application/Protocols/Bindable.swift; sourceTree = SOURCE_ROOT; };
+		3EB0DC9A24E2D84A00E7BEDE /* Record+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Record+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3EB0DC9B24E2D84A00E7BEDE /* Record+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Record+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +127,10 @@
 		3E13D53524D65E4400022542 /* MyRecords */ = {
 			isa = PBXGroup;
 			children = (
-				3E13D53624D65E4400022542 /* AppDelegate.swift */,
-				3E13D53824D65E4400022542 /* SceneDelegate.swift */,
-				3E13D53A24D65E4400022542 /* ViewController.swift */,
-				3E13D53C24D65E4400022542 /* Main.storyboard */,
+				3E94E63924D7B8AA006705DC /* Application */,
 				3E13D54224D65E4600022542 /* Assets.xcassets */,
-				3E13D54424D65E4600022542 /* LaunchScreen.storyboard */,
 				3E13D54724D65E4600022542 /* Info.plist */,
-				3E13D53F24D65E4400022542 /* MyRecords.xcdatamodeld */,
+				3E13D54424D65E4600022542 /* LaunchScreen.storyboard */,
 			);
 			path = MyRecords;
 			sourceTree = "<group>";
@@ -129,6 +151,111 @@
 				3E13D55D24D65E4600022542 /* Info.plist */,
 			);
 			path = MyRecordsUITests;
+			sourceTree = "<group>";
+		};
+		3E45763B24E2CC8E0099D281 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3E45763C24E2CC9E0099D281 /* RecordListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3E45763E24E2CCB60099D281 /* ApiClient */ = {
+			isa = PBXGroup;
+			children = (
+				3E45763F24E2CD1A0099D281 /* BaseApiClient.swift */,
+				3E45764124E2CF1C0099D281 /* RecordsApiClient.swift */,
+			);
+			path = ApiClient;
+			sourceTree = "<group>";
+		};
+		3E45764324E2D2120099D281 /* codable */ = {
+			isa = PBXGroup;
+			children = (
+				3E45764424E2D2120099D281 /* Fields.swift */,
+				3E45764524E2D2120099D281 /* Json4Swift_Base.swift */,
+				3E45764624E2D2120099D281 /* Result.swift */,
+				3E45764724E2D2120099D281 /* _links.swift */,
+				3E45764824E2D2120099D281 /* Records.swift */,
+			);
+			path = codable;
+			sourceTree = "<group>";
+		};
+		3E70120D24E2F1C20070925F /* DatabaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				3E13D53F24D65E4400022542 /* MyRecords.xcdatamodeld */,
+				3EB0DC9A24E2D84A00E7BEDE /* Record+CoreDataClass.swift */,
+				3EB0DC9B24E2D84A00E7BEDE /* Record+CoreDataProperties.swift */,
+			);
+			path = DatabaseModel;
+			sourceTree = "<group>";
+		};
+		3E70120E24E2F1E40070925F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3EB0DC9824E2D79800E7BEDE /* Bindable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		3E70120F24E2F2030070925F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3E13D53C24D65E4400022542 /* Main.storyboard */,
+				3E94E64024D7B8AA006705DC /* RecordsViewController.swift */,
+				3E94E64124D7B8AA006705DC /* RecordsTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3E70121024E2F2660070925F /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				3E13D53624D65E4400022542 /* AppDelegate.swift */,
+				3E13D53824D65E4400022542 /* SceneDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		3E94E63924D7B8AA006705DC /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				3E70121024E2F2660070925F /* SupportingFiles */,
+				3E45763E24E2CCB60099D281 /* ApiClient */,
+				3E70120E24E2F1E40070925F /* Protocols */,
+				3E70120D24E2F1C20070925F /* DatabaseModel */,
+				3E45764324E2D2120099D281 /* codable */,
+				3E94E64824D7B8FA006705DC /* Assets */,
+				3E94E63F24D7B8AA006705DC /* RecordList */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		3E94E63F24D7B8AA006705DC /* RecordList */ = {
+			isa = PBXGroup;
+			children = (
+				3E70120F24E2F2030070925F /* View */,
+				3E45763B24E2CC8E0099D281 /* ViewModel */,
+				3E94E64E24D7B901006705DC /* Models */,
+			);
+			path = RecordList;
+			sourceTree = "<group>";
+		};
+		3E94E64824D7B8FA006705DC /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				3E94E64924D7B8FA006705DC /* eminem_1.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		3E94E64E24D7B901006705DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +364,7 @@
 			files = (
 				3E13D54624D65E4600022542 /* LaunchScreen.storyboard in Resources */,
 				3E13D54324D65E4600022542 /* Assets.xcassets in Resources */,
+				3E94E64C24D7B8FA006705DC /* eminem_1.png in Resources */,
 				3E13D53E24D65E4400022542 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,10 +390,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E13D53B24D65E4400022542 /* ViewController.swift in Sources */,
+				3E45764924E2D2120099D281 /* Fields.swift in Sources */,
+				3E45764B24E2D2120099D281 /* Result.swift in Sources */,
+				3E45764D24E2D2120099D281 /* Records.swift in Sources */,
+				3EB0DC9C24E2D84A00E7BEDE /* Record+CoreDataClass.swift in Sources */,
+				3EB0DC9D24E2D84A00E7BEDE /* Record+CoreDataProperties.swift in Sources */,
+				3E94E64724D7B8AA006705DC /* RecordsTableViewCell.swift in Sources */,
+				3E45764024E2CD1A0099D281 /* BaseApiClient.swift in Sources */,
 				3E13D53724D65E4400022542 /* AppDelegate.swift in Sources */,
+				3E45764A24E2D2120099D281 /* Json4Swift_Base.swift in Sources */,
+				3E45763D24E2CC9E0099D281 /* RecordListViewModel.swift in Sources */,
+				3E94E64624D7B8AA006705DC /* RecordsViewController.swift in Sources */,
+				3EB0DC9924E2D79800E7BEDE /* Bindable.swift in Sources */,
 				3E13D54124D65E4400022542 /* MyRecords.xcdatamodeld in Sources */,
 				3E13D53924D65E4400022542 /* SceneDelegate.swift in Sources */,
+				3E45764C24E2D2120099D281 /* _links.swift in Sources */,
+				3E45764224E2CF1C0099D281 /* RecordsApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
