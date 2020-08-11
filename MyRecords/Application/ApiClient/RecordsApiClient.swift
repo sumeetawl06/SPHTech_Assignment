@@ -11,8 +11,24 @@ import UIKit
 class RecordsApiClient: BaseApiClient {
     
     let apiClient = BaseApiClient()
+    var stubEnabled = false
     
     func getRecords(url: String, completionHandler: @escaping ([Records]?, URLResponse?, Error?) -> Void) {
+        
+        guard !stubEnabled else {
+            guard let url = Bundle.main.url(forResource: "MockData", withExtension: "json"),
+                let data = try? Data(contentsOf: url) else {
+                    completionHandler([], nil, nil)
+                    return
+            }
+            do {
+                let responseModel = try JSONDecoder().decode(APIResponse.self, from: data)
+                completionHandler(responseModel.result?.records, nil, nil)
+            }catch {
+               completionHandler([], nil, nil)
+            }
+            return
+        }
         
         self.apiClient.get(with: url) { (records, response, error) in
             completionHandler(records, response, error)

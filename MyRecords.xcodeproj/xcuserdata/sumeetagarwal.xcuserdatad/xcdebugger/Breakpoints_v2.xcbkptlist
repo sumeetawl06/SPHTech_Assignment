@@ -7,32 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F628A175-4691-4F2C-88C6-3B81DCD53025"
+            uuid = "E5074AE7-62C4-4C10-987A-CC534FA1E521"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyRecords/Application/RecordList/ViewModel/RecordListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "fetchRecords()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "307FDB3B-5EA3-47DB-A64B-C7FBD7B80CBB"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyRecords/Application/RecordList/ViewModel/RecordListViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "isExist(id:)"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "isClickableImageVisible(recordByYear:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

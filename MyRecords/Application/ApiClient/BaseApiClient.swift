@@ -19,7 +19,7 @@ class BaseApiClient: NSObject {
        let task = URLSession.shared.dataTask(with: urlObj) { (data, urlResponse, error) in
            if let data = data {
                do {
-                   let responseModel = try JSONDecoder().decode(Json4Swift_Base.self, from: data)
+                let responseModel = try JSONDecoder().decode(APIResponse.self, from: data)
                 if let items = responseModel.result?.records {
                        completionHandler(items, nil, nil)
                    }else{
