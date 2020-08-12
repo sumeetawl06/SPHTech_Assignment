@@ -12,10 +12,9 @@ import CoreData
 class CoreDataManager: NSObject {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    let EntityName = "Record"
     
     func isExist(id: String) -> Bool {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: EntityName)
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: AppConstants.entityName)
         fetchRequest.predicate = NSPredicate(format: "id = %@", id)
         let res = try! context.fetch(fetchRequest)
         return res.count > 0 ? true : false
@@ -28,7 +27,7 @@ class CoreDataManager: NSObject {
                 return self.fetchRecords()
             }
             if (!isExist(id: "\(objId)")) {
-                guard let entityDescription = NSEntityDescription.entity(forEntityName: EntityName, in: context) else {
+                guard let entityDescription = NSEntityDescription.entity(forEntityName: AppConstants.entityName, in: context) else {
                     return self.fetchRecords()
                 }
                 let dataRecord = Record(entity: entityDescription, insertInto: context)

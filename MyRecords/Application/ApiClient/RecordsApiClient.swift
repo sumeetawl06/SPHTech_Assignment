@@ -12,12 +12,11 @@ class RecordsApiClient: BaseApiClient {
     
     let apiClient = BaseApiClient()
     var stubEnabled = false
-    let urlReq = "https://data.gov.sg/api/action/datastore_search?resource_id=a807b7ab-6cad-4aa6-87d0-e283a7353a0f&limit=5"
 
     func getRecords(completionHandler: @escaping ([Records]?, URLResponse?, Error?) -> Void) {
         
         guard !stubEnabled else {
-            guard let url = Bundle.main.url(forResource: "MockData", withExtension: "json"),
+            guard let url = Bundle.main.url(forResource: AppConstants.resourceFile, withExtension: "json"),
                 let data = try? Data(contentsOf: url) else {
                     completionHandler([], nil, nil)
                     return
@@ -31,7 +30,7 @@ class RecordsApiClient: BaseApiClient {
             return
         }
         
-        self.apiClient.get(with: urlReq) { (records, response, error) in
+        self.apiClient.get(with: AppConstants.dataSourceRequestURL) { (records, response, error) in
             completionHandler(records, response, error)
         }
     }

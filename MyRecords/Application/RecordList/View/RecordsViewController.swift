@@ -21,7 +21,7 @@ class RecordsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = RecordListViewModel()
-        self.title = "Records List"
+        self.title = AppConstants.listScreenTitle
         self.refreshUI()
         self.viewModel.prepareDataModel()
     }

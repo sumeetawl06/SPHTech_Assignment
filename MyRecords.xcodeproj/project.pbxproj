@@ -30,6 +30,7 @@
 		3EB0DC9C24E2D84A00E7BEDE /* Record+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB0DC9A24E2D84A00E7BEDE /* Record+CoreDataClass.swift */; };
 		3EB0DC9D24E2D84A00E7BEDE /* Record+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB0DC9B24E2D84A00E7BEDE /* Record+CoreDataProperties.swift */; };
 		3EC545DA24E3D8CE00DD3B13 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC545D924E3D8CE00DD3B13 /* CoreDataManager.swift */; };
+		3EC545DD24E4080100DD3B13 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC545DC24E4080100DD3B13 /* AppConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		3EB0DC9A24E2D84A00E7BEDE /* Record+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Record+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3EB0DC9B24E2D84A00E7BEDE /* Record+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Record+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3EC545D924E3D8CE00DD3B13 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		3EC545DC24E4080100DD3B13 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +226,7 @@
 		3E94E63924D7B8AA006705DC /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				3EC545DB24E407E800DD3B13 /* Utils */,
 				3E70121024E2F2660070925F /* SupportingFiles */,
 				3E45763E24E2CCB60099D281 /* ApiClient */,
 				3E70120D24E2F1C20070925F /* DatabaseModel */,
@@ -249,6 +252,14 @@
 				3E70121124E2F3EA0070925F /* RecordByYearModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3EC545DB24E407E800DD3B13 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3EC545DC24E4080100DD3B13 /* AppConstants.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,6 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E45764924E2D2120099D281 /* Fields.swift in Sources */,
+				3EC545DD24E4080100DD3B13 /* AppConstants.swift in Sources */,
 				3E45764B24E2D2120099D281 /* Result.swift in Sources */,
 				3E45764D24E2D2120099D281 /* Records.swift in Sources */,
 				3EB0DC9C24E2D84A00E7BEDE /* Record+CoreDataClass.swift in Sources */,
