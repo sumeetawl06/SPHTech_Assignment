@@ -11,72 +11,28 @@ import CoreData
 
 class RecordListViewModel: NSObject {
     
-    let apiClient = RecordsApiClient()
-    let urlReq = "https://data.gov.sg/api/action/datastore_search?resource_id=a807b7ab-6cad-4aa6-87d0-e283a7353a0f&limit=5"
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var records: [Record]?
-    var reloadDataInTable = Bindable<Bool>(false)
-    let EntityName = "Record"
+    var apiClient = RecordsApiClient()
     var dataModel = [RecordByYearModel]()
     var refreshUI : (() -> Void)?
-    
+    let coreDataManager = CoreDataManager()
     
     override init() {
         super.init()
-        fetchDataFromServer()
     }
     
     func fetchDataFromServer() {
-        apiClient.stubEnabled = true
-        apiClient.getRecords(url: urlReq) { (records, response, error) in
-            self.saveDataInLocal(recordsList: records ?? [])
-        }
-    }
-    
-    func isExist(id: String) -> Bool {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: EntityName)
-        fetchRequest.predicate = NSPredicate(format: "id = %@", id)
-        let res = try! context.fetch(fetchRequest)
-        return res.count > 0 ? true : false
-    }
-    
-    func saveDataInLocal(recordsList: [Records]) {
-        for record in recordsList {
-            guard let objId = record._id else {
-                return
-            }
-            if (!isExist(id: "\(objId)")) {
-                guard let entityDescription = NSEntityDescription.entity(forEntityName: EntityName, in: context) else {
-                    return
-                }
-                let dataRecord = Record(entity: entityDescription, insertInto: context)
-                dataRecord.volumeOfMobileData = record.volume_of_mobile_data
-                dataRecord.id = "\(record._id ?? 0)"
-                dataRecord.quarter = record.quarter
-                do {
-                    try context.save()
-                }catch {
-                    print("Failed to save data")
-                }
+        apiClient.getRecords { (records, response, error) in
+            let records = self.coreDataManager.saveDataInLocal(recordsList: records ?? [])
+            if records.count > 0 {
+                _ = self.prepareDataModel()
+                self.refreshUI?()
             }
         }
-        _ = self.prepareDataModel()
-        self.refreshUI?()
-    }
-    
-    func fetchRecords() -> [Record] {
-        do {
-            self.records = try context.fetch(Record.fetchRequest())
-        }
-        catch {
-            return []
-        }
-        return records ?? []
     }
     
     @discardableResult
     func prepareDataModel() -> [RecordByYearModel] {
-        let localDataModels = self.fetchRecords()
+        let localDataModels = self.coreDataManager.fetchRecords()
         var recordByYearModels = [RecordByYearModel]()
         _ = localDataModels.map { (record) -> Void in
             
@@ -88,7 +44,6 @@ class RecordListViewModel: NSObject {
                 existingRecord.year = year
                 existingRecord.dataConsumptionByQuarter[getQuaterFromRecord(record: record)] = Double(record.volumeOfMobileData ?? "0")
                 recordByYearModels = recordByYearModels.filter({!$0.year!.hasPrefix(year)})
-
                 recordByYearModels.append(existingRecord)
             } else {
                 let recordByYear = RecordByYearModel()

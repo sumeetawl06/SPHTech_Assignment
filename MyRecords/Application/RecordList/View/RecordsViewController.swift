@@ -12,10 +12,15 @@ import CoreData
 class RecordsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    let viewModel = RecordListViewModel()
+    var viewModel: RecordListViewModel! {
+        didSet {
+            viewModel.fetchDataFromServer()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = RecordListViewModel()
         self.title = "Records List"
         self.refreshUI()
         self.viewModel.prepareDataModel()

@@ -27,10 +27,9 @@
 		3E70121624E306F30070925F /* MockData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E70121424E303C30070925F /* MockData.json */; };
 		3E94E64624D7B8AA006705DC /* RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E94E64024D7B8AA006705DC /* RecordsViewController.swift */; };
 		3E94E64724D7B8AA006705DC /* RecordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E94E64124D7B8AA006705DC /* RecordsTableViewCell.swift */; };
-		3E94E64C24D7B8FA006705DC /* eminem_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E94E64924D7B8FA006705DC /* eminem_1.png */; };
-		3EB0DC9924E2D79800E7BEDE /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB0DC9824E2D79800E7BEDE /* Bindable.swift */; };
 		3EB0DC9C24E2D84A00E7BEDE /* Record+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB0DC9A24E2D84A00E7BEDE /* Record+CoreDataClass.swift */; };
 		3EB0DC9D24E2D84A00E7BEDE /* Record+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB0DC9B24E2D84A00E7BEDE /* Record+CoreDataProperties.swift */; };
+		3EC545DA24E3D8CE00DD3B13 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC545D924E3D8CE00DD3B13 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,10 +75,9 @@
 		3E70121424E303C30070925F /* MockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockData.json; sourceTree = "<group>"; };
 		3E94E64024D7B8AA006705DC /* RecordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
 		3E94E64124D7B8AA006705DC /* RecordsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordsTableViewCell.swift; sourceTree = "<group>"; };
-		3E94E64924D7B8FA006705DC /* eminem_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eminem_1.png; sourceTree = "<group>"; };
-		3EB0DC9824E2D79800E7BEDE /* Bindable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bindable.swift; path = MyRecords/Application/Protocols/Bindable.swift; sourceTree = SOURCE_ROOT; };
 		3EB0DC9A24E2D84A00E7BEDE /* Record+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Record+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3EB0DC9B24E2D84A00E7BEDE /* Record+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Record+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3EC545D924E3D8CE00DD3B13 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,16 +189,9 @@
 				3E13D53F24D65E4400022542 /* MyRecords.xcdatamodeld */,
 				3EB0DC9A24E2D84A00E7BEDE /* Record+CoreDataClass.swift */,
 				3EB0DC9B24E2D84A00E7BEDE /* Record+CoreDataProperties.swift */,
+				3EC545D924E3D8CE00DD3B13 /* CoreDataManager.swift */,
 			);
 			path = DatabaseModel;
-			sourceTree = "<group>";
-		};
-		3E70120E24E2F1E40070925F /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				3EB0DC9824E2D79800E7BEDE /* Bindable.swift */,
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		3E70120F24E2F2030070925F /* View */ = {
@@ -235,10 +226,8 @@
 			children = (
 				3E70121024E2F2660070925F /* SupportingFiles */,
 				3E45763E24E2CCB60099D281 /* ApiClient */,
-				3E70120E24E2F1E40070925F /* Protocols */,
 				3E70120D24E2F1C20070925F /* DatabaseModel */,
 				3E45764324E2D2120099D281 /* codable */,
-				3E94E64824D7B8FA006705DC /* Assets */,
 				3E94E63F24D7B8AA006705DC /* RecordList */,
 			);
 			path = Application;
@@ -252,14 +241,6 @@
 				3E94E64E24D7B901006705DC /* Models */,
 			);
 			path = RecordList;
-			sourceTree = "<group>";
-		};
-		3E94E64824D7B8FA006705DC /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				3E94E64924D7B8FA006705DC /* eminem_1.png */,
-			);
-			path = Assets;
 			sourceTree = "<group>";
 		};
 		3E94E64E24D7B901006705DC /* Models */ = {
@@ -376,7 +357,6 @@
 			files = (
 				3E13D54624D65E4600022542 /* LaunchScreen.storyboard in Resources */,
 				3E13D54324D65E4600022542 /* Assets.xcassets in Resources */,
-				3E94E64C24D7B8FA006705DC /* eminem_1.png in Resources */,
 				3E13D53E24D65E4400022542 /* Main.storyboard in Resources */,
 				3E70121624E306F30070925F /* MockData.json in Resources */,
 			);
@@ -416,9 +396,9 @@
 				3E45764A24E2D2120099D281 /* APIResponse.swift in Sources */,
 				3E45763D24E2CC9E0099D281 /* RecordListViewModel.swift in Sources */,
 				3E94E64624D7B8AA006705DC /* RecordsViewController.swift in Sources */,
-				3EB0DC9924E2D79800E7BEDE /* Bindable.swift in Sources */,
 				3E13D54124D65E4400022542 /* MyRecords.xcdatamodeld in Sources */,
 				3E13D53924D65E4400022542 /* SceneDelegate.swift in Sources */,
+				3EC545DA24E3D8CE00DD3B13 /* CoreDataManager.swift in Sources */,
 				3E45764224E2CF1C0099D281 /* RecordsApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
